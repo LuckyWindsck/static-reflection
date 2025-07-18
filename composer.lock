@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "91ee38e06e3c72877cdddef58a3a4f11",
+    "content-hash": "abfda26ced5a0246671e058440b52747",
     "packages": [],
     "packages-dev": [
         {
@@ -1620,6 +1620,46 @@
                 }
             ],
             "time": "2024-03-03T12:36:25+00:00"
+        },
+        {
+            "name": "tototoshi/staticmock",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tototoshi/staticmock.git",
+                "reference": "ec8d0a9a4959bca7c0a93eed7cbfbb0e1c8773cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tototoshi/staticmock/zipball/ec8d0a9a4959bca7c0a93eed7cbfbb0e1c8773cb",
+                "reference": "ec8d0a9a4959bca7c0a93eed7cbfbb0e1c8773cb",
+                "shasum": ""
+            },
+            "require-dev": {
+                "herrera-io/runkit-hint": "*",
+                "phpunit/phpunit": "^9.5.3"
+            },
+            "suggest": {
+                "ext-runkit": "https://github.com/runkit7/runkit7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "StaticMock": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A mockery-like DSL to replace static method in test.",
+            "support": {
+                "issues": "https://github.com/tototoshi/staticmock/issues",
+                "source": "https://github.com/tototoshi/staticmock/tree/4.0.1"
+            },
+            "time": "2021-05-13T00:08:14+00:00"
         }
     ],
     "aliases": [],
