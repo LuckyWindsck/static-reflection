@@ -1,0 +1,9 @@
+services:
+  php:
+    build:
+      args:
+        - PHP_IMAGE_TAG=8.4.10-cli-alpine3.21
+    working_dir: /static-reflection
+    volumes:
+      - ./src:/static-reflection/src
+    command: ["php", "src/index.php"]
