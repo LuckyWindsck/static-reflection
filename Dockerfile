@@ -35,4 +35,4 @@ RUN apk add --no-cache --virtual .build-deps \
 RUN apk add --no-cache patch \
   && composer install
 
-CMD ["./vendor/bin/phpunit", "tests"]
+CMD ["vendor/bin/phpunit", "tests"]
