@@ -11,4 +11,5 @@ services:
       - ./patches:/app/patches
       - ./composer.json:/app/composer.json
       - ./composer.lock:/app/composer.lock
+      - ./phpstan.neon:/app/phpstan.neon
       - ./vendor:/app/vendor
