@@ -2,8 +2,22 @@
     "name": "luckywindsck/static-reflection",
     "type": "project",
     "require-dev": {
+        "cweagans/composer-patches": "1.7.3",
         "phpunit/phpunit": "12.2.7",
         "tototoshi/staticmock": "4.0.1"
+    },
+    "extra": {
+        "patches": {
+            "tototoshi/staticmock": [
+                "patches/tototoshi-staticmock-php84.patch"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "cweagans/composer-patches": true
+        }
     },
     "license": "MIT",
     "autoload": {

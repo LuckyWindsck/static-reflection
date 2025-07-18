@@ -1,0 +1,13 @@
+diff --git a/src/StaticMock/MethodReplacer/ClassManager.php b/src/StaticMock/MethodReplacer/ClassManager.php
+index e2b4e33..9f47d47 100644
+--- a/src/StaticMock/MethodReplacer/ClassManager.php
++++ b/src/StaticMock/MethodReplacer/ClassManager.php
+@@ -90,7 +90,7 @@ class ClassManager implements Singleton
+      * @param callable $bear_implementation The closure as given to andImplementation()
+      * @throws \ReflectionException
+      */
+-    public function register($class_name, $method_name, \Closure $method_implementation, \Closure $bear_implementation = null)
++    public function register($class_name, $method_name, \Closure $method_implementation, ?\Closure $bear_implementation = null)
+     {
+         $this->managed_classes[$class_name] =
+             $this

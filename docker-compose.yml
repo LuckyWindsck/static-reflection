@@ -4,9 +4,11 @@ services:
       args:
         - COMPOSER_IMAGE_TAG=2.8.10
         - PHP_IMAGE_TAG=8.4.10-cli-alpine3.21
+        - UOPZ_GIT_TAG=v7.1.1
     volumes:
       - ./src:/app/src
       - ./tests:/app/tests
+      - ./patches:/app/patches
       - ./composer.json:/app/composer.json
       - ./composer.lock:/app/composer.lock
       - ./vendor:/app/vendor
