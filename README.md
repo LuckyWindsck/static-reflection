@@ -4,4 +4,6 @@
 
 # Usage
 
-`docker compose up`
+`docker compose run --rm php`
+
+`docker compose run --rm php ./vendor/bin/phpunit tests`
