@@ -12,4 +12,5 @@ services:
       - ./composer.json:/app/composer.json
       - ./composer.lock:/app/composer.lock
       - ./phpstan.neon:/app/phpstan.neon
+      - ./ecs.php:/app/ecs.php
       - ./vendor:/app/vendor

@@ -5,6 +5,7 @@
         "cweagans/composer-patches": "1.7.3",
         "phpstan/phpstan": "2.1.18",
         "phpunit/phpunit": "12.2.7",
+        "symplify/easy-coding-standard": "12.5.20",
         "tototoshi/staticmock": "4.0.1"
     },
     "extra": {
