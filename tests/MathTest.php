@@ -22,16 +22,16 @@ final class MathTest extends TestCase
 
     public function test_square(): void
     {
-        $squared = Math::square(4);
+        $squared = Math::square(4); // Math::multiply is not mocked
 
         $this->assertSame(16, $squared);
     }
 
     public function test_square_with_staticmock(): void
     {
-        $staticmock = StaticMock::mock('Math');
+        $staticmock = StaticMock::mock('Math'); // Cannot go to definition
 
-        $staticmock->shouldReceive('multiply')
+        $staticmock->shouldReceive('multiply') // Same here
           ->once()
           ->with(4, 4)
           ->andReturn(16);
@@ -49,7 +49,9 @@ final class MathTest extends TestCase
         [
             'class_name' => $class_name,
             'method_name' => $method_name,
-        ] = StaticReflection::getClosureName(Math::multiply(...));
+        ] = StaticReflection::getClosureName(
+            Math::multiply(...) // Can go to definition
+        );
 
         $staticmock = StaticMock::mock($class_name);
 
