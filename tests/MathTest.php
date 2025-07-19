@@ -49,7 +49,7 @@ final class MathTest extends TestCase
         [
             'class_name' => $class_name,
             'method_name' => $method_name,
-        ] = self::getClosureName(Math::multiply(...));
+        ] = StaticReflection::getClosureName(Math::multiply(...));
 
         $staticmock = StaticMock::mock($class_name);
 
@@ -64,31 +64,5 @@ final class MathTest extends TestCase
         $this->assertSame(16, $squared);
 
         unset($staticmock);
-    }
-
-    /**
-     * @return array{
-     *   class_name: string,
-     *   method_name: string,
-     * }
-     */
-    private static function getClosureName(Closure $closure): array
-    {
-        $reflection_function = new ReflectionFunction($closure);
-
-        $reflection_class = $reflection_function->getClosureScopeClass();
-        if ($reflection_class === null) {
-            throw new Exception('reflection_class does not exist');
-        }
-
-        $reflection_method = $reflection_class->getMethod($reflection_function->getName());
-        if (!$reflection_method->isStatic()) {
-            throw new Exception('reflection_method is not static');
-        }
-
-        return [
-            'class_name' => $reflection_class->getName(),
-            'method_name' => $reflection_method->getName(),
-        ];
     }
 }
